@@ -1,0 +1,33 @@
+{
+  "name": "pc-parts-guide",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "dev.cmd",
+    "build": "build.cmd",
+    "build:ci": "next build",
+    "start": "start.cmd",
+    "purge-non-steam-game-images": "node scripts/purge-non-steam-game-images.mjs",
+    "download-covers": "node scripts/download-covers.mjs",
+    "download-covers:rawg": "node scripts/download-covers-rawg.mjs",
+    "download-covers:all": "node scripts/download-covers.mjs && node scripts/download-covers-rawg.mjs",
+    "download-covers:fallback": "node scripts/download-covers-fallback.mjs",
+    "download-workload-covers": "node scripts/download-workload-covers.mjs",
+    "lint": "lint.cmd"
+  },
+  "dependencies": {
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "^15.1.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2"
+  }
+}

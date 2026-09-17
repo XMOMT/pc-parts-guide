@@ -1,0 +1,9 @@
+Game artwork sources
+
+Steam store CDN — used where the game has a Steam app ID (see classify.ts / cover download script).
+Not affiliated with Valve or publishers; identification and commentary only.
+
+RAWG.io — used for select non-Steam PC titles when configured (npm run download-covers:rawg).
+Requires RAWG_API_KEY and visible attribution: https://rawg.io/apidocs
+
+Per-game RAWG records (when fetched): public/games/image-sources.json
