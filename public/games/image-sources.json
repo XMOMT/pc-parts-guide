@@ -1,0 +1,52 @@
+{
+  "fortnite": {
+    "provider": "rawg",
+    "rawgId": 28131,
+    "rawgSlug": "fortnite",
+    "rawgName": "Fortnite: Save The World",
+    "rawgUrl": "https://rawg.io/games/fortnite",
+    "coverUrl": "https://media.rawg.io/media/games/d97/d97f663b752a6484df105993f17abb49.jpg",
+    "backgroundUrl": "https://media.rawg.io/media/games/d97/d97f663b752a6484df105993f17abb49.jpg",
+    "fetchedAt": "2026-09-17"
+  },
+  "forza-horizon-3": {
+    "provider": "rawg",
+    "rawgId": 881,
+    "rawgSlug": "forza-horizon-3",
+    "rawgName": "Forza Horizon 3",
+    "rawgUrl": "https://rawg.io/games/forza-horizon-3",
+    "coverUrl": "https://media.rawg.io/media/games/30a/30afe3a3cb06849dc032ef3b9295f180.jpg",
+    "backgroundUrl": "https://media.rawg.io/media/games/30a/30afe3a3cb06849dc032ef3b9295f180.jpg",
+    "fetchedAt": "2026-09-17"
+  },
+  "gears-of-war-4": {
+    "provider": "rawg",
+    "rawgId": 8278,
+    "rawgSlug": "gears-of-war-4",
+    "rawgName": "Gears of War 4",
+    "rawgUrl": "https://rawg.io/games/gears-of-war-4",
+    "coverUrl": "https://media.rawg.io/media/games/079/079175933a50b2bf202edd6aa17be19c.jpg",
+    "backgroundUrl": "https://media.rawg.io/media/games/079/079175933a50b2bf202edd6aa17be19c.jpg",
+    "fetchedAt": "2026-09-17"
+  },
+  "call-of-duty-black-ops-4": {
+    "provider": "rawg",
+    "rawgId": 58389,
+    "rawgSlug": "call-of-duty-black-ops-4",
+    "rawgName": "Call of Duty: Black Ops 4",
+    "rawgUrl": "https://rawg.io/games/call-of-duty-black-ops-4",
+    "coverUrl": "https://media.rawg.io/media/games/450/4501d8493e6ed172bd4982a16b56e580.jpg",
+    "backgroundUrl": "https://media.rawg.io/media/games/450/4501d8493e6ed172bd4982a16b56e580.jpg",
+    "fetchedAt": "2026-09-17"
+  },
+  "alan-wake-2": {
+    "provider": "rawg",
+    "rawgId": 580972,
+    "rawgSlug": "alan-wake-2",
+    "rawgName": "Alan Wake 2",
+    "rawgUrl": "https://rawg.io/games/alan-wake-2",
+    "coverUrl": "https://media.rawg.io/media/games/5b9/5b963d7633cd640fa2dbc4069d1c6377.jpg",
+    "backgroundUrl": "https://media.rawg.io/media/games/5b9/5b963d7633cd640fa2dbc4069d1c6377.jpg",
+    "fetchedAt": "2026-09-17"
+  }
+}
