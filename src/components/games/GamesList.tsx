@@ -103,20 +103,25 @@ export default function GamesList({ games }: GamesListProps) {
                   <li key={game.slug}>
                     <Link
                       href={`/games/${game.slug}`}
-                      className="card-hover group relative block min-h-[3.25rem] overflow-hidden rounded-lg border border-surface-800 px-4 py-3"
+                      className="card-hover group relative block min-h-[4.5rem] overflow-hidden rounded-lg border border-surface-800 px-4 py-3"
                     >
-                      <div
-                        className="absolute inset-0 bg-cover bg-center opacity-35 transition-opacity group-hover:opacity-45"
-                        style={{
-                          backgroundImage: `url("${withBasePath(`/games/${game.slug}.jpg`)}")`,
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={withBasePath(`/games/${game.slug}.jpg`)}
+                        alt=""
+                        aria-hidden
+                        loading="lazy"
+                        decoding="async"
+                        className="absolute inset-0 h-full w-full object-cover opacity-70 transition-opacity group-hover:opacity-85"
+                        onError={(e) => {
+                          e.currentTarget.style.display = "none";
                         }}
-                        aria-hidden="true"
                       />
                       <div
-                        className="absolute inset-0 bg-gradient-to-r from-surface-950/90 via-surface-950/75 to-surface-950/60 transition-colors group-hover:from-surface-950/85 group-hover:via-surface-950/65 group-hover:to-surface-950/50"
+                        className="absolute inset-0 bg-gradient-to-r from-surface-950/80 via-surface-950/55 to-surface-950/35 transition-colors group-hover:from-surface-950/70 group-hover:via-surface-950/45 group-hover:to-surface-950/25"
                         aria-hidden="true"
                       />
-                      <span className="relative z-10 font-medium text-white group-hover:text-brand-400">
+                      <span className="relative z-10 font-medium text-white drop-shadow-sm group-hover:text-brand-400">
                         {game.title}
                       </span>
                     </Link>

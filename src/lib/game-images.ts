@@ -5,13 +5,16 @@ function normalizeCoverPath(path: string) {
   return path.startsWith("/") ? path : `/${path}`;
 }
 
-/** Main cover art shown in the page header card */
-export function getGameCoverImage(slug: string, content?: GamePageContent | null) {
-  const path = content?.coverImage ?? `/games/${slug}.jpg`;
-  return withBasePath(normalizeCoverPath(path));
+/** Path under `public/` (no basePath). Use with Next.js APIs that add basePath automatically. */
+export function getGameCoverPath(slug: string, content?: GamePageContent | null) {
+  return normalizeCoverPath(content?.coverImage ?? `/games/${slug}.jpg`);
 }
 
-/** Wide background art — separate from the header cover */
+/** Full URL for `<img>` / CSS on GitHub Pages and local dev. */
+export function getGameCoverImage(slug: string, content?: GamePageContent | null) {
+  return withBasePath(getGameCoverPath(slug, content));
+}
+
 export function getGameBackgroundImage(slug: string) {
   return withBasePath(`/games/${slug}-bg.jpg`);
 }

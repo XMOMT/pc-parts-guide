@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { getWorkloadCoverImage } from "@/lib/workload-images";
 
@@ -35,14 +34,15 @@ export default function WorkloadCover({ slug, title, alt }: WorkloadCoverProps) 
       {failed ? (
         <CoverPlaceholder title={title} slug={slug} />
       ) : (
-        <Image
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
           src={imageSrc}
           alt={imageAlt}
           width={920}
           height={430}
+          decoding="async"
+          fetchPriority="high"
           className="h-auto w-full rounded-xl border border-surface-800/80 object-cover"
-          sizes="(max-width: 768px) 100vw, 768px"
-          priority
           onError={() => setFailed(true)}
         />
       )}
