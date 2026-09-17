@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { withBasePath } from "@/lib/base-path";
 import { useMemo, useState } from "react";
 import type { Game, GameGenre } from "@/lib/games";
 import { gameGenres } from "@/lib/games";
@@ -107,7 +108,7 @@ export default function GamesList({ games }: GamesListProps) {
                       <div
                         className="absolute inset-0 bg-cover bg-center opacity-35 transition-opacity group-hover:opacity-45"
                         style={{
-                          backgroundImage: `url(/games/${game.slug}.jpg)`,
+                          backgroundImage: `url("${withBasePath(`/games/${game.slug}.jpg`)}")`,
                         }}
                         aria-hidden="true"
                       />

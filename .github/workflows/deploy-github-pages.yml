@@ -35,6 +35,7 @@ jobs:
           GITHUB_PAGES: "true"
           GITHUB_PAGES_REPO: ${{ github.event.repository.name }}
           NEXT_PUBLIC_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build:ci
 
       - name: Upload Pages artifact

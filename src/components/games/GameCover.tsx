@@ -1,5 +1,6 @@
 "use client";
 
+import { getGameCoverImage } from "@/lib/game-images";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -27,7 +28,7 @@ function CoverPlaceholder({ title, slug }: { title: string; slug: string }) {
 
 export default function GameCover({ slug, title, src, alt }: GameCoverProps) {
   const [failed, setFailed] = useState(false);
-  const imageSrc = src ?? `/games/${slug}.jpg`;
+  const imageSrc = src ?? getGameCoverImage(slug);
   const imageAlt = alt ?? `${title} cover art`;
 
   return (

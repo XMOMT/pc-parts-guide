@@ -1,5 +1,6 @@
 "use client";
 
+import { getGameBackgroundImage } from "@/lib/game-images";
 import { useState } from "react";
 
 type GamePageBackgroundProps = {
@@ -18,7 +19,7 @@ export default function GamePageBackground({ slug }: GamePageBackgroundProps) {
       {!hidden && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={`/games/${slug}-bg.jpg`}
+          src={getGameBackgroundImage(slug)}
           alt=""
           decoding="async"
           fetchPriority="low"

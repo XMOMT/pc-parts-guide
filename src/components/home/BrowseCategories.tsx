@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { withBasePath } from "@/lib/base-path";
 import { BuildIcon, WorkloadIcon } from "@/components/ui/Icons";
 import {
   cpuBuildCards,
@@ -29,7 +30,7 @@ function BuildCardLink({ card }: { card: BuildCard }) {
 
 function WorkloadCardLink({ card }: { card: WorkloadCard }) {
   const slug = card.href.replace(/^\/workloads\//, "");
-  const coverSrc = `/workloads/${slug}.jpg`;
+  const coverSrc = withBasePath(`/workloads/${slug}.jpg`);
 
   return (
     <Link

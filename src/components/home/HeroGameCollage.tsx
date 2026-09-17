@@ -1,3 +1,5 @@
+import { withBasePath } from "@/lib/base-path";
+
 const collageSlugs = [
   "cyberpunk-2077",
   "elden-ring",
@@ -71,7 +73,7 @@ export default function HeroGameCollage() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`/games/${slug}.jpg`}
+                src={withBasePath(`/games/${slug}.jpg`)}
                 alt=""
                 className="h-full w-full object-cover"
                 loading="eager"
